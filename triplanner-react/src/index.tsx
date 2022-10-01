@@ -2,8 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import './style.css'
-import FirstPageHomePage from './views/first-page-home-page'
+import FirstPageHomePage from './views/first-page-home-page/first-page-home-page'
 
 const App = () => {
   return (

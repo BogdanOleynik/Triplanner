@@ -1,5 +1,6 @@
 import css from './Navigation.module.css';
 import sprite from '../../images/sprite.svg';
+import Auth from 'components/Auth';
 
 export default function Navigation() {
   return (
@@ -67,6 +68,7 @@ export default function Navigation() {
               </svg>
               <span className={css.login__text}>Увійти</span>
             </button>
+            <Auth></Auth>
           </ul>
         </div>
       </nav>

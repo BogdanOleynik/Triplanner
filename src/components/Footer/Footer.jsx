@@ -8,7 +8,7 @@ export default function Footer() {
           <li className={css.triplanner}>TriPlanner (c) 2022</li>
           <ul className={css.conditions}>
             <li className={css.link}>
-              <a href="/#" className={css.footer__links}>
+              <a href="/Privacy" className={css.footer__links}>
                 Політика конфіденційності
               </a>
             </li>
@@ -18,7 +18,7 @@ export default function Footer() {
               </a>
             </li>
             <li className={css.link}>
-              <a href="/#" className={css.footer__links}>
+              <a href="/Cookies" className={css.footer__links}>
                 Політика Cookie
               </a>
             </li>
@@ -26,7 +26,7 @@ export default function Footer() {
 
           <ul>
             <li className={css.link}>
-              <a href="/#" className={css.footer__links}>
+              <a href="/Agreement" className={css.footer__links}>
                 Згода на обробку даних
               </a>
             </li>
@@ -39,22 +39,22 @@ export default function Footer() {
 
           <ul>
             <li className={css.link}>
-              <a href="/#" className={css.footer__links}>
+              <a href="/Contacts" className={css.footer__links}>
                 Контакти
               </a>
             </li>
             <li className={css.link}>
-              <a href="/#" className={css.footer__links}>
+              <a href="/AboutUs" className={css.footer__links}>
                 Про нас
               </a>
             </li>
             <li className={css.link}>
-              <a href="/#" className={css.footer__links}>
+              <a href="/Help" className={css.footer__links}>
                 Допомога
               </a>
             </li>
             <li className={css.link}>
-              <a href="/#" className={css.footer__links}>
+              <a href="/Partnership" className={css.footer__links}>
                 Співробітництво
               </a>
             </li>

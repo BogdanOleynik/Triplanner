@@ -1,7 +1,16 @@
 import css from "./Auth.module.css"
 import "./styles.css"
+import React,{useState} from "react"
 
 export default function Auth() {
+    const [state1, setState1] = useState(false);
+    const [state2, setState2] = useState(false);
+    const toogle1=()=>{
+        setState1(!state1);
+    }
+    const toogle2=()=>{
+        setState2(!state2);
+    }
     return (
         <>
             <section>
@@ -11,10 +20,10 @@ export default function Auth() {
                             <div className={css.authreg}>
                                 <ul className="nav nav-tabs" id="myTab" role="tablist">
                                     <li className="nav-item">
-                                        <a className="nav-link active" id="auth-tab" data-toggle="tab" href="#auth" role="tab" aria-controls="home" aria-selected="true">Авторизація</a>
+                                        <button onClick={toogle1} className={"auth-tab " + (state1 ? "auth-tab-active": "auth-tab")} data-toggle="tab" href="#auth" role="tab" aria-controls="home" aria-selected="true">Авторизація</button>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" id="reg-tab" data-toggle="tab" href="#reg" role="tab" aria-controls="profile" aria-selected="false">Реєстрація</a>
+                                        <button onClick={toogle2} className={"reg-tab " + (state2 ? "reg-tab-active": "reg-tab")} data-toggle="tab" href="#reg" role="tab" aria-controls="profile" aria-selected="false">Реєстрація</button>
                                     </li>
                                 </ul>
                             </div>

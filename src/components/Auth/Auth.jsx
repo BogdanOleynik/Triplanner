@@ -27,9 +27,9 @@ export default function Auth() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="modal-body auth_modal">
+                            <div className="modal-body auth-modal">
                                 <p>Увійти через</p>
-                                <ul className="social_log">
+                                <ul className="social-log">
                                     <li><button className="google"></button></li>
                                     <li><button className="facebook"></button></li>
                                 </ul>

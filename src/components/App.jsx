@@ -7,6 +7,8 @@ import Contacts from './Contacts';
 import Partnership from './Partnership';
 import AboutUs from './AboutUs';
 import Help from './Help';
+import Agreement from './Agreement';
+import Privacy from './Privacy';
 
 export const App = () => {
   return (

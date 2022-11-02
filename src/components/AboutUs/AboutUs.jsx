@@ -1,8 +1,10 @@
 import Footer from "components/Footer"
 import Header from "components/Header"
 import css from "./AboutUs.module.css"
+import { Link, useLocation } from 'react-router-dom';
 
 export default function AboutUs() {
+    const location = useLocation();
     return (
         <>
             <section className={css.hero}>
@@ -53,16 +55,20 @@ export default function AboutUs() {
                             <div className={css.cookie}>
                                 Якщо у вас є запитання щодо цієї політики або ви хотіли б дізнатися більше про файли cookie, які використовуються на наших вебсайтах
                             </div>
-                            <a href="/TriPlanner">
-                                <div className={css.buttonlink}>
+                            <Link
+                                to={`/`}
+                                state={{ from: location }}
+                            >
+                                <a href="/#">
+                                    <div className={css.buttonlink}>
 
-                                </div>
-                            </a>
+                                    </div>
+                                </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
-            <Footer></Footer>
         </>
     )
 }

@@ -72,16 +72,20 @@ export default function Contacts() {
                             </div>
                             <span className={css.textcalendar}>Пн-Пт	с 9:00 до 00:00<br />
                                 Сб, Нд	с 10:00 до 19:00</span>
-                            <a href="/TriPlanner">
-                                <div className={css.buttonlink}>
+                            <Link
+                                to={`/`}
+                                state={{ from: location }}
+                            >
+                                <a href="/#">
+                                    <div className={css.buttonlink}>
 
-                                </div>
-                            </a>
+                                    </div>
+                                </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
             </section>
-            <Footer></Footer>
         </>
     )
 }

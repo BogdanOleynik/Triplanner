@@ -26,15 +26,19 @@ export default function Cookies() {
                         <div className={css.policy_content_bottom}>
                             Якщо у вас є запитання щодо цієї політики або ви хотіли б дізнатися більше про файли cookie, які використовуються на наших веб-сайтах
                         </div>
-                        <a href="/TriPlanner">
-                            <div className={css.buttonlink}>
+                        <Link
+                            to={`/`}
+                            state={{ from: location }}
+                        >
+                            <a href="/#">
+                                <div className={css.buttonlink}>
 
-                            </div>
-                        </a>
+                                </div>
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </section>
-            <Footer />
         </>
     )
 }

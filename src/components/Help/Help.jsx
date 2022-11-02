@@ -57,15 +57,19 @@ export default function Help() {
                                 </a>
                             </li>
                         </ul>
-                        <a href="/TriPlanner">
-                            <div className={css.buttonlink}>
+                        <Link
+                            to={`/`}
+                            state={{ from: location }}
+                        >
+                            <a href="/#">
+                                <div className={css.buttonlink}>
 
-                            </div>
-                        </a>
+                                </div>
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </section>
-            <Footer></Footer>
         </>
     )
 }

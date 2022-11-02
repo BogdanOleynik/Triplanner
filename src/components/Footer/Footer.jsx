@@ -2,6 +2,7 @@ import css from './Footer.module.css';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Footer() {
+  const location = useLocation();
   return (
     <>
       <section className={css.footer__background}>

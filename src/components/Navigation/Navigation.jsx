@@ -68,7 +68,7 @@ export default function Navigation() {
               </svg>
               <span className={css.login__text}>Увійти</span>
             </button>
-            <Auth></Auth>
+            {/* <Auth></Auth> */}
           </ul>
         </div>
       </nav>

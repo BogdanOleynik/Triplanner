@@ -2,7 +2,7 @@
   "name": "triplanner-front",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bogdanoleynik.github.io/triplanner-front-main",
+  "homepage": "https://bogdanoleynik.github.io/triplanner/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

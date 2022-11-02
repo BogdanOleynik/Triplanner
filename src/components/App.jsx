@@ -13,12 +13,12 @@ export const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Cookies" element={<Cookies />} />
-        <Route path="/Contacts" element={<Contacts />} />
-        <Route path="/Help" element={<Help />} />
-        <Route path="/Partnership" element={<Partnership />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="tickets/ticketId" element={<Ticket />} />
+        <Route path='agreement' element={<Agreement />} />
+        <Route path='contacts' element={<Contacts />} />
+        <Route path='cookies' element={<Cookies />} />
+        <Route path='help' element={<Help />} />
+        <Route path='partnership' element={<Partnership />} />
+        <Route path='privacy' element={<Privacy />} />
       </Routes>
 
       <Footer />

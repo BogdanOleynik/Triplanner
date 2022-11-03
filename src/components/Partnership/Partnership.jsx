@@ -1,8 +1,9 @@
-import Footer from "components/Footer"
 import Header from "components/Header"
 import css from "./Partnership.module.css"
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Help() {
+    const location = useLocation();
     return (
         <>
             <section className={css.hero}>

@@ -1,4 +1,3 @@
-import Footer from "components/Footer"
 import Header from "components/Header"
 import css from "./AboutUs.module.css"
 import { Link, useLocation } from 'react-router-dom';

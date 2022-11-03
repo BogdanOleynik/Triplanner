@@ -1,8 +1,9 @@
 import css from "./Cookies.module.css"
 import Header from "components/Header"
-import Footer from "components/Footer"
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Cookies() {
+    const location = useLocation();
     return (
         <>
             <section className={css.hero}>

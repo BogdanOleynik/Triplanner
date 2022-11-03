@@ -10,16 +10,15 @@ export default function Footer() {
           <li className={css.triplanner}>TriPlanner (c) 2022</li>
           <ul className={css.conditions}>
             <Link
-              to={`/tickets/ticketId/settings`}
+              to={`/privacy`}
               state={{ from: location }}
             >
               <li className={css.link}>
                 <a href="/#" className={css.footer__links}>
-                  Умови повернення
+                  Політика конфіденційності
                 </a>
               </li>
             </Link>
-
             <Link
               to={`/cookies`}
               state={{ from: location }}
@@ -43,17 +42,6 @@ export default function Footer() {
                 </a>
               </li>
             </Link>
-
-            <Link
-              to={`/tickets/ticketId/settings`}
-              state={{ from: location }}
-            >
-              <li className={css.link}>
-                <a href="/#" className={css.footer__links}>
-                  Публічна оферта
-                </a>
-              </li>
-            </Link>
           </ul>
 
           <ul>
@@ -69,7 +57,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              to={`/tickets/ticketId/settings`}
+              to={`/aboutus`}
               state={{ from: location }}
             >
               <li className={css.link}>
@@ -110,17 +98,6 @@ export default function Footer() {
               <li className={css.link}>
                 <a href="/#" className={css.footer__links}>
                   Мапа сайту
-                </a>
-              </li>
-            </Link>
-
-            <Link
-              to={`/tickets/ticketId/settings`}
-              state={{ from: location }}
-            >
-              <li className={css.link}>
-                <a href="/#" className={css.footer__links}>
-                  Мапа COVID-правил
                 </a>
               </li>
             </Link>

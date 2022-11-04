@@ -68,8 +68,8 @@ export default function Auth() {
                                 <li>
                                     <input type="radio" className={css.radiobutton} />
                                     <label className={css.attention}>Натискаючи кнопку реєстрації, я приймаю<br />
-                                        умови <a href="#">Договору оферти</a> і не заперечую проти<br />
-                                        <a href="#">Обробки моїх персональних даних</a> і передачі їх<br />
+                                        умови Договору оферти і не заперечую проти<br />
+                                        <Link to="/privacy"><a href="#">Обробки моїх персональних даних</a></Link> і передачі їх<br />
                                         третім особам (авіаперевізнику та ін.).
                                     </label>
                                 </li>

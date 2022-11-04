@@ -19,7 +19,7 @@
 .sitemap_info {
     position: relative;
     width: 40vw;
-    height: 70px;
+    height: 8vh;
     left: 65px;
     top: 35px;
     font-family: 'Montserrat';
@@ -41,6 +41,7 @@ ul.links li {
     display: inline-block;
     left: 23px;
     margin-right: -8px;
+    color: #3DB1EC;
 }
 
 .left{
@@ -53,7 +54,7 @@ ul.links li {
     line-height: 13px;
     text-decoration-line: underline;
 
-    color: #5185B5;
+    color: black;
 }
 
 .leftlink{
@@ -64,7 +65,11 @@ ul.links li {
     line-height: 13px;
     text-decoration-line: underline;
 
-    color: #5185B5;
+    color: black;
+}
+
+a{
+    color:#3DB1EC;
 }
 
 .right{

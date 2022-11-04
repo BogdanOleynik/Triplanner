@@ -1,24 +1,28 @@
 import css from './Header.module.css';
 import sprite from '../../images/sprite.svg';
-import Auth from 'components/Auth';
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
   const location = useLocation();
-  const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
       <div className={css.header}>
-        <svg
-          width="126px"
-          height="30px"
-          aria-label="Логотип сервісу"
-          className={css.logo}
+        <Link
+          to={`/`}
+          state={{ from: location }}
         >
-          <use href={sprite + '#icon-logo'}></use>
-        </svg>
-
+          <a href="#">
+            <svg
+              width="126px"
+              height="30px"
+              aria-label="Логотип сервісу"
+              className={css.logo}
+            >
+              <use href={sprite + '#icon-logo'}></use>
+            </svg>
+          </a>
+        </Link>
         <ul className={css.header__features}>
           <li className={css.header__feature}>
             <svg
@@ -77,20 +81,24 @@ export default function Header() {
             </svg>
           </li>
           <li>
-            <button type="button" className={css.button__login} onClick={() => { setModalOpen(true); }}>
-              <svg
-                width="20px"
-                height="20px"
-                aria-label="Увійти"
-                className={css.login__icon}
-              >
-                <use href={sprite + '#icon-login'}></use>
-              </svg>
-              <span className={css.login__text}>Увійти</span>
-            </button>
+            <Link
+              to={`/auth`}
+              state={{ from: location }}
+            >
+              <button type="button" className={css.button__login}>
+                <svg
+                  width="20px"
+                  height="20px"
+                  aria-label="Увійти"
+                  className={css.login__icon}
+                >
+                  <use href={sprite + '#icon-login'}></use>
+                </svg>
+                <span className={css.login__text}>Увійти</span>
+              </button>
+            </Link>
           </li>
         </ul>
-        {modalOpen && <Auth setOpenModal={setModalOpen}></Auth>}
       </div>
     </>
   );

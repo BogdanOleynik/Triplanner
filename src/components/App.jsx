@@ -10,6 +10,8 @@ import Help from './Help';
 import Agreement from './Agreement';
 import Privacy from './Privacy';
 import SiteMap from './SiteMap';
+import Auth from './Auth';
+import Reg from './Reg';
 
 export const App = () => {
   return (
@@ -25,8 +27,9 @@ export const App = () => {
         <Route path='partnership' element={<Partnership />} />
         <Route path='privacy' element={<Privacy />} />
         <Route path='aboutus' element={<AboutUs />} />
+        <Route path="auth" element={<Auth />} />
+        <Route path="reg" element={<Reg />} />
       </Routes>
-
       <Footer />
     </>
   );

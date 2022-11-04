@@ -9,6 +9,7 @@ import AboutUs from './AboutUs';
 import Help from './Help';
 import Agreement from './Agreement';
 import Privacy from './Privacy';
+import SiteMap from './SiteMap';
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
         <Route path='contacts' element={<Contacts />} />
         <Route path='cookies' element={<Cookies />} />
         <Route path='help' element={<Help />} />
+        <Route path='sitemap' element={<SiteMap />} />
         <Route path='partnership' element={<Partnership />} />
         <Route path='privacy' element={<Privacy />} />
         <Route path='aboutus' element={<AboutUs />} />

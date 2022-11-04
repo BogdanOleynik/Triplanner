@@ -92,7 +92,7 @@ export default function Footer() {
           <ul>
 
             <Link
-              to={`/tickets/ticketId/settings`}
+              to={`/sitemap`}
               state={{ from: location }}
             >
               <li className={css.link}>

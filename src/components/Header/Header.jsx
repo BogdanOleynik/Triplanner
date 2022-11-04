@@ -1,8 +1,12 @@
 import css from './Header.module.css';
 import sprite from '../../images/sprite.svg';
 import Auth from 'components/Auth';
+import React, { useState } from "react";
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
+  const location = useLocation();
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
       <div className={css.header}>
@@ -36,15 +40,22 @@ export default function Header() {
             </svg>
           </li>
           <li className={css.header__feature}>
-            <svg
-              width="14px"
-              height="16px"
-              aria-label=""
-              className={css.header__images__left}
+            <Link
+              to={`/help`}
+              state={{ from: location }}
             >
-              <use href={sprite + '#icon-support'}></use>
-            </svg>
-            Допомога
+              <a href="#">
+                <svg
+                  width="14px"
+                  height="16px"
+                  aria-label=""
+                  className={css.header__images__left}
+                >
+                  <use href={sprite + '#icon-support'}></use>
+                </svg>
+                Допомога
+              </a>
+            </Link>
           </li>
           <li className={css.header__feature}>
             <svg
@@ -66,7 +77,7 @@ export default function Header() {
             </svg>
           </li>
           <li>
-            <button type="button" className={css.button__login} data-toggle="modal" data-target="#authModal">
+            <button type="button" className={css.button__login} onClick={() => { setModalOpen(true); }}>
               <svg
                 width="20px"
                 height="20px"
@@ -77,9 +88,9 @@ export default function Header() {
               </svg>
               <span className={css.login__text}>Увійти</span>
             </button>
-            {/* <Auth></Auth> */}
           </li>
         </ul>
+        {modalOpen && <Auth setOpenModal={setModalOpen}></Auth>}
       </div>
     </>
   );

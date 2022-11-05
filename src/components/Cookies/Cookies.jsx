@@ -1,5 +1,5 @@
 import css from "./Cookies.module.css"
-import Header from "components/Header"
+import AuthedHeader from "components/AuthedHeader"
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Cookies() {
@@ -7,7 +7,7 @@ export default function Cookies() {
     return (
         <>
             <section className={css.hero}>
-                <Header></Header>
+                <AuthedHeader></AuthedHeader>
                 <div>
                     <div className={css.cookies_policy}>
                         <div className={css.policy_ebilet}>
@@ -28,7 +28,7 @@ export default function Cookies() {
                             Якщо у вас є запитання щодо цієї політики або ви хотіли б дізнатися більше про файли cookie, які використовуються на наших веб-сайтах
                         </div>
                         <Link
-                            to={`/`}
+                            to={`/homeauthed`}
                             state={{ from: location }}
                         >
                             <a href="/#">

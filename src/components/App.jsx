@@ -12,6 +12,7 @@ import Privacy from './Privacy';
 import SiteMap from './SiteMap';
 import Auth from './Auth';
 import Reg from './Reg';
+import HomeAuthed from './HomeAuthed';
 
 export const App = () => {
   return (
@@ -29,6 +30,7 @@ export const App = () => {
         <Route path='aboutus' element={<AboutUs />} />
         <Route path="auth" element={<Auth />} />
         <Route path="reg" element={<Reg />} />
+        <Route path="homeauthed" element={<HomeAuthed />} />
       </Routes>
       <Footer />
     </>

@@ -66,9 +66,8 @@ export default function Navigation() {
               >
                 <use href={sprite + '#icon-login'}></use>
               </svg>
-              <span className={css.login__text}>Увійти</span>
+              <span className={css.login__text}>Кабінет</span>
             </button>
-            {/* <Auth></Auth> */}
           </ul>
         </div>
       </nav>

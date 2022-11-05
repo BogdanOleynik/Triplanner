@@ -1,4 +1,4 @@
-import Header from "components/Header"
+import AuthedHeader from "components/AuthedHeader"
 import css from "./Contacts.module.css"
 import { Link, useLocation } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ export default function Contacts() {
     return (
         <>
             <section className={css.hero}>
-                <Header></Header>
+                <AuthedHeader></AuthedHeader>
                 <div>
                     <div className={css.contacts}>
                         <div className={css.contacts_info}>
@@ -74,7 +74,7 @@ export default function Contacts() {
                             <span className={css.textcalendar}>Пн-Пт	с 9:00 до 00:00<br />
                                 Сб, Нд	с 10:00 до 19:00</span>
                             <Link
-                                to={`/`}
+                                to={`/homeauthed`}
                                 state={{ from: location }}
                             >
                                 <a href="/#">

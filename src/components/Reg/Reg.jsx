@@ -74,7 +74,12 @@ export default function Auth() {
                                     </label>
                                 </li>
                                 <li>
-                                    <button type="submit" className={css.btn_login}>Створити аккаунт</button>
+                                    <Link
+                                        to={`/homeauthed`}
+                                        state={{ from: location }}
+                                    >
+                                        <button type="submit" className={css.btn_login}>Створити аккаунт</button>
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

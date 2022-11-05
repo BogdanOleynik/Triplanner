@@ -1,4 +1,4 @@
-import Header from "components/Header"
+import AuthedHeader from "components/AuthedHeader"
 import css from "./SiteMap.module.css"
 import { Link, useLocation } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ export default function SiteMap() {
     return (
         <>
             <section className={css.hero}>
-                <Header></Header>
+                <AuthedHeader></AuthedHeader>
                 <div className={css.map}>
                     <div className={css.navbuttons}>
                         <ul className={css.links}>
@@ -481,7 +481,7 @@ export default function SiteMap() {
                             </ul>
                         </div>
                         <Link
-                            to={`/`}
+                            to={`/homeauthed`}
                             state={{ from: location }}
                         >
                             <a href="/#">

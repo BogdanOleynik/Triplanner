@@ -1,4 +1,4 @@
-import Header from "components/Header"
+import AuthedHeader from "components/AuthedHeader"
 import css from "./Help.module.css"
 import { Link, useLocation } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ export default function Help() {
     return (
         <>
             <section className={css.hero}>
-                <Header></Header>
+                <AuthedHeader></AuthedHeader>
                 <div>
                     <div className={css.help}>
                         <div className={css.help_info}>
@@ -59,7 +59,7 @@ export default function Help() {
                             </li>
                         </ul>
                         <Link
-                            to={`/`}
+                            to={`/homeauthed`}
                             state={{ from: location }}
                         >
                             <a href="/#">

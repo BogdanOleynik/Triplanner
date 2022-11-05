@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/triplanner/static/css/main.ffc48d87.css",
-    "main.js": "/triplanner/static/js/main.df862e12.js",
+    "main.css": "/triplanner/static/css/main.d6f7e884.css",
+    "main.js": "/triplanner/static/js/main.30f79d97.js",
     "static/media/image7.jpg": "/triplanner/static/media/image7.764f0410af0936a22f12.jpg",
     "static/media/image8.jpg": "/triplanner/static/media/image8.b8f666b19f202374e1f7.jpg",
     "static/media/image4.jpg": "/triplanner/static/media/image4.8524eceae9103602aee1.jpg",
@@ -24,11 +24,11 @@
     "static/media/main__direction.svg": "/triplanner/static/media/main__direction.37acde7cdd26dc68ec74.svg",
     "static/media/pink.svg": "/triplanner/static/media/pink.21289bdc218f8c650cae253a1183f5db.svg",
     "index.html": "/triplanner/index.html",
-    "main.ffc48d87.css.map": "/triplanner/static/css/main.ffc48d87.css.map",
-    "main.df862e12.js.map": "/triplanner/static/js/main.df862e12.js.map"
+    "main.d6f7e884.css.map": "/triplanner/static/css/main.d6f7e884.css.map",
+    "main.30f79d97.js.map": "/triplanner/static/js/main.30f79d97.js.map"
   },
   "entrypoints": [
-    "static/css/main.ffc48d87.css",
-    "static/js/main.df862e12.js"
+    "static/css/main.d6f7e884.css",
+    "static/js/main.30f79d97.js"
   ]
 }

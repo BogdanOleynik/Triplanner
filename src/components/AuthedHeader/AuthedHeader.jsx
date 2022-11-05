@@ -82,7 +82,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              to={`/auth`}
+              to={`/homeauthed`}
               state={{ from: location }}
             >
               <button type="button" className={css.button__login}>

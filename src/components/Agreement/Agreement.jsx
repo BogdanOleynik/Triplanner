@@ -1,4 +1,4 @@
-import Header from "components/Header"
+import AuthedHeader from "components/AuthedHeader"
 import css from "./Agreement.module.css"
 import { Link, useLocation } from 'react-router-dom';
 
@@ -7,7 +7,7 @@ export default function Agreement() {
     return (
         <>
             <section className={css.hero}>
-                <Header></Header>
+                <AuthedHeader></AuthedHeader>
                 <div>
                     <div className={css.agreement}>
                         <div className={css.agreement_info}>
@@ -72,7 +72,7 @@ export default function Agreement() {
                                 </div>
                             </div>
                             <Link
-                                to={`/`}
+                                to={`/homeauthed`}
                                 state={{ from: location }}
                             >
                                 <a href="/#">

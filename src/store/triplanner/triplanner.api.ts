@@ -3,7 +3,7 @@ import { City, Country, Ticket } from '../../models/models'
 
 export const triplannerApi = createApi({
   reducerPath: 'triplannerApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://triplanner.uk/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://api.triplanner.uk/' }),
   endpoints: (builder) => ({
     getCities: builder.query<Array<City>, string>({
       query: (cityName: string) => ({
@@ -29,4 +29,4 @@ export const triplannerApi = createApi({
 
   }),
 })
-export const { useGetCitiesQuery, useLazyGetTicketsQuery, useGetCountriesQuery } = triplannerApi
+export const { useGetCitiesQuery, useGetTicketsQuery, useGetCountriesQuery } = triplannerApi

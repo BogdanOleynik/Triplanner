@@ -6,55 +6,9 @@ import pink from '../../images/pink.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { Navigation } from '../Navigation/Navigation';
 import logo from '../../images/search_logo.svg';
-import { useEffect, useState } from 'react';
-import { useGetCitiesQuery, useLazyGetTicketsQuery } from '../../store/triplanner/triplanner.api';
-import { useCitySuggest } from '../../hooks/debounce';
 import { TicketOffered } from '../TicketOffered/TicketOffered';
 
-export interface SearchParams {
-    fromId: string;
-    toId?: string;
-    departureTime?: Date;
-    arrivalTime?: Date;
-    type?: string;
-}
-
 export function Ticket() {
-    const [fromSearch, setFromSearch] = useState('')
-    const [toSearch, setToSearch] = useState('')
-
-    const [dropdownFrom, setDropdownFrom] = useState(false)
-    const [dropdownTo, setDropdownTo] = useState(false)
-
-    const [fromCitySuggest, toCitySuggest] = useCitySuggest(fromSearch, toSearch)
-
-    const fromData = useGetCitiesQuery(fromCitySuggest, {
-        skip: fromCitySuggest.length < 1,
-        refetchOnFocus: true
-    }).data
-
-    const toData = useGetCitiesQuery(toCitySuggest, {
-        skip: toCitySuggest.length < 1,
-        refetchOnFocus: true
-    }).data
-
-    useEffect(() => {
-        setDropdownFrom(fromCitySuggest.length > 0 && fromData?.length! > 0 && fromData?.findIndex((c) => c.name === fromSearch) === -1)
-    }, [fromCitySuggest, fromData, fromSearch])
-
-    useEffect(() => {
-        setDropdownTo(toCitySuggest.length > 0 && toData?.length! > 0 && toData?.findIndex((c) => c.name === toSearch) === -1)
-    }, [toCitySuggest, toData, toSearch])
-
-    const clickHandlerFrom = (cityName: string) => {
-        setFromSearch(cityName)
-        setDropdownFrom(false)
-    }
-
-    const clickHandlerTo = (cityName: string) => {
-        setToSearch(cityName)
-        setDropdownTo(false)
-    }
     const location = useLocation();
     return (
         <>
@@ -120,26 +74,14 @@ export function Ticket() {
                                         className={css.input__icon}
                                         width="22px"
                                         height="24px"
-
                                     />
                                     <input
                                         type="text"
                                         placeholder="Чернівці, Україна"
                                         autoComplete="off"
                                         autoFocus
-                                        value={fromSearch}
-                                        onChange={e => setFromSearch(e.target.value)}
                                         className={css.input__direction}
                                     />
-                                    {dropdownFrom && <ul className={css.dropdown__list}>
-                                        {fromData?.map(city => (
-                                            <li
-                                                key={city.id}
-                                                onClick={() => clickHandlerFrom(city.name)}
-                                                className={css.dropdown__list__item}
-                                            >{city.name}</li>
-                                        ))}
-                                    </ul>}
                                 </li>
 
                                 <li className={css.input__wrapper}>
@@ -163,19 +105,8 @@ export function Ticket() {
                                         placeholder="Lausanne, Schweiz (QLS)"
                                         autoComplete="off"
                                         autoFocus
-                                        value={toSearch}
-                                        onChange={e => setToSearch(e.target.value)}
                                         className={css.input__direction}
                                     />
-                                    {dropdownTo && <ul className={css.dropdown__list}>
-                                        {toData?.map(city => (
-                                            <li
-                                                key={city.id}
-                                                onClick={() => clickHandlerTo(city.name)}
-                                                className={css.dropdown__list__item}
-                                            >{city.name}</li>
-                                        ))}
-                                    </ul>}
                                     <svg
                                         width="19px"
                                         height="19px"

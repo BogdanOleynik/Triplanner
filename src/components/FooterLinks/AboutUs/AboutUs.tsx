@@ -1,6 +1,6 @@
 import {Header} from "../../Header/Header"
 import css from "./AboutUs.module.css"
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom'
 
 export default function AboutUs() {
     const location = useLocation();

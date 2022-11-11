@@ -9,7 +9,7 @@ import Destinations from '../Destinations/Destinations';
 import JoinUs from '../JoinUs/JoinUs';
 import { CustomDatePicker } from '../CustomDatePicker/CustomDatePicker';
 import { useEffect, useState } from 'react';
-import { useGetCitiesQuery, useLazyGetTicketsQuery } from '../../store/triplanner/triplanner.api';
+import { useGetCitiesQuery } from '../../store/triplanner/triplanner.api';
 import { useCitySuggest } from '../../hooks/debounce';
 
 export interface CityProps {

@@ -15,6 +15,8 @@ import { Ticket } from './Ticket/Ticket';
 import { TicketDetails } from './TicketDetails/TicketDetails';
 import { TravelOptions } from './TravelOptions/TravelOptions';
 import { Trip } from './Trip/Trip';
+import AboutUs from './FooterLinks/AboutUs/AboutUs';
+import SiteMap from './FooterLinks/SiteMap/SiteMap';
 
 export const App = () => {
   return (
@@ -26,7 +28,7 @@ export const App = () => {
         <Route path="cabinet/options" element={<TravelOptions />} />
         <Route path="cabinet/options/trip" element={<Trip />} />
         <Route path="cabinet/notifications" element={<Notifications />} />
-
+        <Route path='aboutus' element={<AboutUs />} />
         <Route path='agreement' element={<Agreement />} />
         <Route path='contacts' element={<Contacts />} />
         <Route path='cookies' element={<Cookies />} />
@@ -35,6 +37,7 @@ export const App = () => {
         <Route path='privacy' element={<Privacy />} />
         <Route path='auth' element={<Auth />} />
         <Route path='reg' element={<Reg />} />
+        <Route path='sitemap' element={<SiteMap />} />
         <Route path="*" element={<NotFoundPage />} />
 
       </Routes>

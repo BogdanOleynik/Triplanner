@@ -12,35 +12,35 @@ export default function SiteMap() {
                     <div className={css.navbuttons}>
                         <ul className={css.links}>
                             <li>
-                                <a href="#">
+                                <a href="#" className={css.link}>
                                     <div className={css.flight}>
 
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" className={css.link}>
                                     <div className={css.railway}>
 
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" className={css.link}>
                                     <div className={css.bus}>
 
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" className={css.link}>
                                     <div className={css.shelter}>
 
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" className={css.link}>
                                     <div className={css.car}>
 
                                     </div>
@@ -54,212 +54,212 @@ export default function SiteMap() {
                         </div>
                         <div className={css.leftlist}>
                             <ul className={css.left}>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Мексика – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Канада
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Китай
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Японія – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Італія
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Іспанія
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Німеччина – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Бразилія
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Колумбія – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Домініканська Республіка
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучене Королівство – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Іспанія – Сполучене Королівствo
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Мексика – Канада
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Греція – Франція
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Іспанія – Польща
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Гватемала – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Іспанія – Сполучене Королівствo
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Мексика – Канада
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Греція – Франція
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.leftlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Іспанія – Китай
                                         </a>
                                     </Link>
@@ -268,212 +268,212 @@ export default function SiteMap() {
                         </div>
                         <div className={css.rightlist}>
                             <ul className={css.right}>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Мексика – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Канада
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Китай
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Японія – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Італія
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Іспанія
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Німеччина – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Бразилія
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Колумбія – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучені Штати – Домініканська Республіка
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Сполучене Королівство – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Іспанія – Сполучене Королівствo
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Мексика – Канада
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Греція – Франція
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Іспанія – Польща
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Гватемала – Сполучені Штати
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Іспанія – Сполучене Королівствo
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Мексика – Канада
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Греція – Франція
                                         </a>
                                     </Link>
                                 </li>
-                                <li className={css.rightlink}>
+                                <li>
                                     <Link
                                         to={`/tickets/ticketId`}
                                         state={{ from: location }}
                                     >
-                                        <a href="#">
+                                        <a href="#" className={css.link}>
                                             Рейси Іспанія – Китай
                                         </a>
                                     </Link>
@@ -481,7 +481,7 @@ export default function SiteMap() {
                             </ul>
                         </div>
                         <Link
-                            to={`/homeauthed`}
+                            to={`/`}
                             state={{ from: location }}
                         >
                             <a href="/#">

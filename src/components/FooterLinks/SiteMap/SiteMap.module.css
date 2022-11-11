@@ -5,7 +5,7 @@
     margin: 0 auto;
     background-image: linear-gradient(rgba(4, 38, 161, 0.3),
             rgba(167, 151, 151, 0.3)),
-        url(../../images/image8.jpg);
+        url(../../../images/image8.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -68,7 +68,7 @@ ul.links li {
     color: black;
 }
 
-a{
+.link{
     color:#3DB1EC;
 }
 

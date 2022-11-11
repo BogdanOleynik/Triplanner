@@ -7,11 +7,6 @@
   padding-top: 39px;
   margin: 0;
 }
-
-a{
-  color: white;
-}
-
 .header__feature {
   position: relative;
   font-weight: 500;
@@ -42,6 +37,7 @@ a{
   line-height: 17px;
   color: #fff;
   border: 1px #fff;
+  cursor: pointer;
 }
 .logo {
   position: absolute;

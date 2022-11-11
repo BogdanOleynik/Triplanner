@@ -7,9 +7,27 @@ import { Link, useLocation } from 'react-router-dom';
 import { Navigation } from '../Navigation/Navigation';
 import logo from '../../images/search_logo.svg';
 import { TicketOffered } from '../TicketOffered/TicketOffered';
+import { CityProps } from '../Home/Home';
+import { useEffect, useState } from 'react';
+
+interface SearchParams {
+    fromCity: CityProps
+    toCity?: CityProps
+    departureDate?: Date | null
+    returnDate?: Date | null
+    type?: string
+}
 
 export function Ticket() {
     const location = useLocation();
+    const [searchParams, setSearchParams] = useState<SearchParams>()
+    useEffect(() => {
+        if (location.state) {
+            console.log(location.state)
+            let _state = location.state as any
+            setSearchParams(_state)
+        }
+    }, [])
     return (
         <>
             <div className={css.ticket__header}>
@@ -80,6 +98,7 @@ export function Ticket() {
                                         placeholder="Чернівці, Україна"
                                         autoComplete="off"
                                         autoFocus
+                                        value={searchParams?.fromCity.name}
                                         className={css.input__direction}
                                     />
                                 </li>
@@ -105,6 +124,7 @@ export function Ticket() {
                                         placeholder="Lausanne, Schweiz (QLS)"
                                         autoComplete="off"
                                         autoFocus
+                                        value={searchParams?.toCity?.name}
                                         className={css.input__direction}
                                     />
                                     <svg
@@ -131,6 +151,7 @@ export function Ticket() {
                                         autoComplete="off"
                                         autoFocus
                                         placeholder="01.09.2022"
+                                        value={searchParams?.departureDate?.toLocaleDateString()}
                                         className={css.input__date}
                                     />
                                 </li>
@@ -148,6 +169,7 @@ export function Ticket() {
                                         autoComplete="off"
                                         autoFocus
                                         placeholder="Назад"
+                                        value={searchParams?.returnDate?.toLocaleDateString()}
                                         className={css.input__date}
                                     />
                                 </li>

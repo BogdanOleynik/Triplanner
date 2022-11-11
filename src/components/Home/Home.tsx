@@ -281,7 +281,7 @@ export function Home() {
                   />
                 </div>
                 <li className={css.ticket__search}>
-                  <Link to={`/tickets/ticketId`} state={{ from: location, fromCityProps: fromSearch, toCityProps: toSearch }} >
+                  <Link to={`/tickets/ticketId`} state={{ fromCity: fromSearch, toCity: toSearch, departureDate: firstData, returnDate: secondData }} >
                     <button className={css.ticket__button} type="submit" >
                       <svg width="22px" height="25px" aria-label="Пошук">
                         <use href={sprite + '#icon-search'}></use>

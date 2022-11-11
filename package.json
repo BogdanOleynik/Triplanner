@@ -1,7 +1,7 @@
 {
   "name": "triplanner-front-ts",
   "version": "0.1.0",
-  "homepage": "https://HYMPYT.github.io/triplanner/",
+  "homepage": "https://bogdanoleynik.github.io/triplanner/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.0",
@@ -31,7 +31,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

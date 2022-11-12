@@ -1,25 +1,17 @@
 import css from './Ticket.module.css';
-import sprite from '../../images/sprite.svg';
-import place from '../../images/place.svg';
-import date from '../../images/date.svg';
-import pink from '../../images/pink.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { Navigation } from '../Navigation/Navigation';
 import logo from '../../images/search_logo.svg';
 import { TicketOffered } from '../TicketOffered/TicketOffered';
-import { CityProps } from '../Home/Home';
 import { useEffect, useState } from 'react';
-
-interface SearchParams {
-    fromCity: CityProps
-    toCity?: CityProps
-    departureDate?: Date | null
-    returnDate?: Date | null
-    type?: string
-}
+import { useGetTicketsQuery } from '../../store/triplanner/triplanner.api';
+import { SearchParams } from '../../models/models';
+import sprite from '../../images/sprite.svg';
+import place from '../../images/place.svg';
+import date from '../../images/date.svg';
 
 export function Ticket() {
-    const location = useLocation();
+    const location = useLocation()
     const [searchParams, setSearchParams] = useState<SearchParams>()
     useEffect(() => {
         if (location.state) {
@@ -27,7 +19,14 @@ export function Ticket() {
             let _state = location.state as any
             setSearchParams(_state)
         }
-    }, [])
+    }, [location])
+    const { data } = useGetTicketsQuery({
+        fromId: searchParams?.fromCity.id ?? '',
+        toId: searchParams?.toCity?.id,
+        dDate: searchParams?.dDate?.toLocaleDateString(),
+        rDate: searchParams?.rDate?.toLocaleDateString(),
+        type: searchParams?.type
+    })
     return (
         <>
             <div className={css.ticket__header}>
@@ -151,7 +150,7 @@ export function Ticket() {
                                         autoComplete="off"
                                         autoFocus
                                         placeholder="01.09.2022"
-                                        value={searchParams?.departureDate?.toLocaleDateString()}
+                                        value={searchParams?.dDate?.toLocaleDateString()}
                                         className={css.input__date}
                                     />
                                 </li>
@@ -169,7 +168,7 @@ export function Ticket() {
                                         autoComplete="off"
                                         autoFocus
                                         placeholder="Назад"
-                                        value={searchParams?.returnDate?.toLocaleDateString()}
+                                        value={searchParams?.rDate?.toLocaleDateString()}
                                         className={css.input__date}
                                     />
                                 </li>
@@ -181,6 +180,7 @@ export function Ticket() {
                                     <label className={css.radio__route__label}>
                                         <input
                                             type="radio"
+                                            name="radio"
                                             id="route__check"
                                             className={css.radio__route__input}
                                         />
@@ -191,6 +191,7 @@ export function Ticket() {
                                     <label className={css.radio__route__label}>
                                         <input
                                             type="radio"
+                                            name="radio"
                                             id="route__check"
                                             className={css.radio__route__input}
                                         />
@@ -203,6 +204,7 @@ export function Ticket() {
                                     <label className={css.radio__route__label}>
                                         <input
                                             type="radio"
+                                            name="radio"
                                             id="route__check"
                                             className={css.radio__route}
                                         />
@@ -213,6 +215,7 @@ export function Ticket() {
                                     <label className={css.radio__route__label}>
                                         <input
                                             type="radio"
+                                            name="radio"
                                             id="route__check"
                                             className={css.radio__route}
                                         />
@@ -240,9 +243,7 @@ export function Ticket() {
                                 </button>
                             </ul>
                         </div>
-                        <TicketOffered></TicketOffered>
-                        <TicketOffered></TicketOffered>
-                        <TicketOffered></TicketOffered>
+                        {data?.map(ticket => <TicketOffered place={ticket.from.name} price={ticket.price} type={ticket.ticketType} departurePlace={ticket.to.name} />)}
                     </div>
                 </div>
                 <div className={css.navigation}>

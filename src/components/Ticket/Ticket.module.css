@@ -69,6 +69,7 @@
 }
 
 .transport__filter {
+  margin-left: -7.5px;
   margin-bottom: 11px;
 }
 
@@ -87,7 +88,7 @@
 
 .transport__filter__results {
   border: none;
-  width: 124px;
+  width: 115px;
   height: 22px;
 
   border-radius: 15.5px;
@@ -165,8 +166,8 @@
 
 .radio__route__input {
   position: absolute;
-  top: 15%;
-  left: -10%;
+  top: -10%;
+  left: -12.5%;
   width: 15px;
   height: 15px;
   background: #ffffff;
@@ -175,8 +176,8 @@
 
 .radio__route {
   position: absolute;
-  top: 15%;
-  left: -17%;
+  top: -10%;
+  left: -25%;
   width: 15px;
   height: 15px;
   background: #ffffff;

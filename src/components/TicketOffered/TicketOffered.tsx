@@ -3,8 +3,25 @@ import sprite from '../../images/sprite.svg';
 import place from '../../images/place.svg';
 import date from '../../images/date.svg';
 import pink from '../../images/pink.svg';
+import { BusTicketInfo, City, Company, FlightTicketInfo, RailwayTicketInfo } from '../../models/models';
+import { Link, useLocation } from 'react-router-dom';
 
-export function TicketOffered() {
+interface TicketOfferedParams {
+    ddate?: Date
+    rdate?: Date
+    place: string
+    price: string
+    type: string
+    cityFrom?: City
+    cityTo?: City
+    company?: Company
+    info?: BusTicketInfo | FlightTicketInfo | RailwayTicketInfo
+    departurePlace: string
+    distance?: number
+}
+
+export function TicketOffered({ place, price, type, departurePlace }: TicketOfferedParams) {
+    const location = useLocation()
     return (
         <>
             <section>
@@ -29,16 +46,19 @@ export function TicketOffered() {
                                 type="button"
                                 className={css.transport__filter__price}
                             >
-                                ~ 79 EUR
+                                ~ {price}
                             </button>
                         </li>
                     </ul>
                     <ul className={css.travel__options__images}>
-                        <li>
-                            <svg width="24px" height="24px" aria-label="">
-                                <use href={sprite + '#icon-directions_bus-2'}></use>
-                            </svg>
-                        </li>
+                        {
+                            type == 'BUS' && <li>
+                                <svg width="24px" height="24px" aria-label="">
+                                    <use href={sprite + '#icon-directions_bus-2'}></use>
+                                </svg>
+                            </li>
+                        }
+
                         <li className={css.arrow}>
                             <svg width="34px" height="8px" aria-label="">
                                 <use href={sprite + '#icon-yellow-arrow'}></use>
@@ -90,7 +110,7 @@ export function TicketOffered() {
                     </ul>
                     <ul className={css.routes}>
                         <li className={css.route}>
-                            Залізничний вокзал “Чернівці”
+                            {place}
                             <svg
                                 width="3px"
                                 height="6px"
@@ -100,7 +120,7 @@ export function TicketOffered() {
                                 <use href={sprite + '#icon-yellow-link'}></use>
                             </svg>
                         </li>
-                        <li className={css.route}>
+                        {/* <li className={css.route}>
                             Автовокзал Катовіце
                             <svg
                                 width="3px"
@@ -143,8 +163,8 @@ export function TicketOffered() {
                             >
                                 <use href={sprite + '#icon-blue-link'}></use>
                             </svg>
-                        </li>
-                        <li className={css.route}>Lausanne (QLS)</li>
+                        </li> */}
+                        <li className={css.route}>{departurePlace}</li>
                         <li className={css.notification}>
                             <p>
                                 <svg
@@ -172,18 +192,19 @@ export function TicketOffered() {
                                 </svg>
                                 <span className={css.button__text}>Завантажити PDF</span>
                             </button>
-
-                            <button type="button" className={css.search__btn}>
-                                <svg
-                                    width="16px"
-                                    height="16px"
-                                    aria-label=""
-                                    className={css.button__icon}
-                                >
-                                    <use href={sprite + '#icon-search'}></use>
-                                </svg>
-                                <span className={css.button__text}> Відкрити деталі</span>
-                            </button>
+                            <Link to={`/cabinet/options/trip`} state={{ from: location }}>
+                                <button type="button" className={css.search__btn}>
+                                    <svg
+                                        width="16px"
+                                        height="16px"
+                                        aria-label=""
+                                        className={css.button__icon}
+                                    >
+                                        <use href={sprite + '#icon-search'}></use>
+                                    </svg>
+                                    <span className={css.button__text}> Відкрити деталі</span>
+                                </button>
+                            </Link>
                         </div>
                     </ul>
                 </div>

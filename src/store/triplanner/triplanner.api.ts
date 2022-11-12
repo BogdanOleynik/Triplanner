@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { City, Country, Ticket } from '../../models/models'
+import { City, Country, LoginUser, RegisterUser, Ticket, User } from '../../models/models'
 
 export const triplannerApi = createApi({
   reducerPath: 'triplannerApi',
@@ -11,12 +11,12 @@ export const triplannerApi = createApi({
       })
     }),
 
-    getTickets: builder.query<Array<Ticket>, { fromId: string, toId?: string, dDate?: string, rDate?: string}>({
+    getTickets: builder.query<Array<Ticket>, { fromId: string, toId?: string, dDate?: string, rDate?: string, type?: string}>({
       query: (arg) => {
-        const { fromId, toId, dDate, rDate } = arg
+        const { fromId, toId, dDate, rDate, type } = arg
         return {
-          url: 'tickets',
-          params: { fromId, toId, dDate, rDate }
+          url: 'api/tickets/search',
+          params: { fromId, toId, dDate, rDate, type }
         }
       }
     }),
@@ -27,6 +27,21 @@ export const triplannerApi = createApi({
       })
     }),
 
+    register: builder.query<User, RegisterUser>({
+      query: (credentials) => ({
+        url: "reg",
+        method: "POST",
+        body: credentials
+      })
+    }),
+
+    login: builder.query<User, LoginUser>({
+      query: (credentials) => ({
+        url: "auth",
+        method: "POST",
+        body: credentials
+      })
+    }),
   }),
 })
 export const { useGetCitiesQuery, useGetTicketsQuery, useGetCountriesQuery } = triplannerApi
